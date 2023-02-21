@@ -1,5 +1,16 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
+
+button {
+    padding: 2px 4px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+}

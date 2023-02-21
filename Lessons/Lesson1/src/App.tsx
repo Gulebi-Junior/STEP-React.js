@@ -1,20 +1,13 @@
-const TodoList = () => (
-    <ul>
-        <li>Gleb</li>
-        <li>Glob</li>
-        <li>Glib</li>
-    </ul>
-);
+import Header from "./components/Header";
+import TodoList from "./components/TodoList";
 
-function App() {
-    const welcomeText = "Hello World!";
-
+const App = () => {
     return (
         <div className="App">
-            <h1>{welcomeText}</h1>
+            <Header title="Todo App"></Header>
             <TodoList></TodoList>
         </div>
     );
-}
+};
 
 export default App;
