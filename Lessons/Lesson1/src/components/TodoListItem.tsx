@@ -1,56 +1,24 @@
-// import React from "react";
-
-// const TodoListItem = (props: { text: string }) => {
-//     let isDone = false;
-
-//     return (
-//         <li>
-//             <span onClick={done} style={{ textDecoration: isDone ? "line-through" : "auto" }}>
-//                 {props.text}
-//             </span>
-//             <button>Delete</button>
-//         </li>
-//     );
-// };
-
-// export default TodoListItem;
-
+import { ITodo } from "@/types";
 import React, { Component } from "react";
+import "./TodoListItem.css";
 
-interface ITodoListState {
-    isDone: boolean;
-    isImportant: boolean;
+interface ITodoListItemProps extends ITodo {
+    passOnChange: (p: string, id: number) => void;
 }
 
-export class TodoListItem extends Component<{ text: string }, ITodoListState> {
-    state = {
-        isDone: false,
-        isImportant: false,
-    };
+export class TodoListItem extends Component<ITodoListItemProps> {
+    render() {
+        const { name, isDone, isImportant, passOnChange, id } = this.props;
 
-    done = (): void => {
-        this.setState({ isDone: !this.state.isDone });
-    };
-
-    important = (): void => {
-        this.setState({ isImportant: !this.state.isImportant });
-    };
-
-    render(): JSX.Element {
-        const { text } = this.props;
         return (
             <li>
+                <input type="checkbox" onInput={() => passOnChange("done", id)} />
                 <span
-                    onClick={this.done}
-                    onDoubleClick={this.important}
-                    style={{
-                        textDecoration: this.state.isDone ? "line-through" : "auto",
-                        fontWeight: this.state.isImportant ? "bold" : "normal",
-                    }}
+                    className={`${isDone ? "done" : ""} ${isImportant ? "important" : ""}`}
+                    onDoubleClick={() => passOnChange("important", id)}
                 >
-                    {text}
+                    {name}
                 </span>
-                <button>Delete</button>
             </li>
         );
     }

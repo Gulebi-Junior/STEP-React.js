@@ -14,3 +14,7 @@ li {
     gap: 5px;
     user-select: none;
 }
+
+.App {
+    padding: 20px;
+}
