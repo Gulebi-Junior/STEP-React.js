@@ -15,6 +15,15 @@ li {
     user-select: none;
 }
 
-.App {
+.app {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+
+button,
+input {
+    padding: 2px 6px;
 }
