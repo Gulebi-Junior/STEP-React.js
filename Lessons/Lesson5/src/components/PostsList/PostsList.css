@@ -1,0 +1,3 @@
+.posts-list-block > p::first-letter {
+    text-transform: uppercase;
+}
