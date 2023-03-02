@@ -7,7 +7,17 @@
 .block {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 15px 25px;
+    padding: 25px 35px;
     border: 2px solid gray;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+}
+
+button {
+    padding: 2px 6px;
 }

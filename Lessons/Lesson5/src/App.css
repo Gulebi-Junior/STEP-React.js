@@ -1,5 +1,6 @@
 .app-container {
     display: flex;
+    align-items: flex-start;
     gap: 30px;
-    padding: 50px;
+    padding: 50px 5%;
 }

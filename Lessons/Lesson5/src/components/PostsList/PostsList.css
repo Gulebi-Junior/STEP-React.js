@@ -1,3 +1,17 @@
-.posts-list-block > p::first-letter {
+.posts-list-block {
+    width: 600px;
+    gap: 15px;
+}
+
+.post-block > h3::first-letter {
     text-transform: uppercase;
+}
+
+.post-block {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: start;
+    border: 1px solid gray;
+    padding: 10px 15px;
 }
