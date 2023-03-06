@@ -1,0 +1,4 @@
+.posts-page-block {
+    display: flex;
+    gap: 30px;
+}
