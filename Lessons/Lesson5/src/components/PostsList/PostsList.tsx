@@ -21,8 +21,10 @@ function PostsList({ onShowSinglePost, posts, isLoading }: IPostsListProps) {
                 posts.map((post) => (
                     <div key={post.id} className="post-block">
                         <h3>{post.title}</h3>
-                        <button onClick={() => onShowSinglePost(post)}>View</button>
-                        <button onClick={() => navigate(`/post/${post.id}`)}>View Full</button>
+                        <div className="post-btns-row">
+                            <button onClick={() => onShowSinglePost(post)}>View</button>
+                            <button onClick={() => navigate(`/post/${post.id}`)}>View Full</button>
+                        </div>
                     </div>
                 ))
             )}

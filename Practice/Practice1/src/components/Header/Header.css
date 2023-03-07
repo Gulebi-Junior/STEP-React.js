@@ -1,0 +1,19 @@
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #415a77;
+    color: #e0e1dd;
+    padding: 0 10%;
+}
+
+.header-column {
+    display: flex;
+    gap: 30px;
+}
+
+.header-column > a {
+    color: #e0e1dd;
+}
