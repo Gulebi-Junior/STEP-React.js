@@ -1,4 +1,4 @@
-import { increment, decrement, incrementRandom } from "./../actions/counterAction";
+import { increment, decrement, incrementRandom } from "../actions/counterActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 const initialState = { counter: 0 };

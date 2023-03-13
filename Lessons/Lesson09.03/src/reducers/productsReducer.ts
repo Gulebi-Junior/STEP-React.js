@@ -1,4 +1,4 @@
-import { createProductAction } from "./../actions/productsAction";
+import { createProductAction } from "../actions/productsActions";
 import { createReducer } from "@reduxjs/toolkit";
 
 const initialState = {

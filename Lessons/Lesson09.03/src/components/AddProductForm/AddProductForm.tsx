@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { createProductAction } from "../../actions/productsAction";
+import { createProductAction } from "../../actions/productsActions";
 
 function AddProductForm() {
     const [name, setName] = useState("");
