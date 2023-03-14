@@ -4,7 +4,7 @@ import { IUser, IUsersReduser } from "@/types";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Spinner } from "@/components";
-import { setLoading } from "@/reducers/loaderSlice";
+import { setLoading, unsetLoading } from "@/reducers/loaderSlice";
 
 function UsersList() {
     const dispatch: AppDispatch = useDispatch();
@@ -13,12 +13,12 @@ function UsersList() {
     const error = useSelector<RootState, IUsersReduser["error"]>((state) => state.users.error);
 
     useEffect(() => {
-        dispatch(fetchUsers());
+        (async () => {
+            dispatch(setLoading());
+            await dispatch(fetchUsers());
+            dispatch(unsetLoading());
+        })();
     }, []);
-
-    useEffect(() => {
-        dispatch(setLoading());
-    }, [users]);
 
     return (
         <div className="user-list-container">

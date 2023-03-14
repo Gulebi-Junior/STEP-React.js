@@ -1,4 +1,4 @@
-import { AddProductForm, Counter, ProductsList, Spinner, UsersList } from "./components";
+import { AddProductForm, Counter, PostsList, ProductsList, Spinner, UsersList } from "./components";
 import "./App.css";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
@@ -10,10 +10,11 @@ function App() {
         <div className="app-container">
             <h1>Redux</h1>
             {/* <Counter /> */}
-            <ProductsList />
+            {/* <ProductsList />
             <AddProductForm />
             <UsersList />
-            {loading && <Spinner />}
+            {loading && <Spinner />} */}
+            <PostsList />
         </div>
     );
 }

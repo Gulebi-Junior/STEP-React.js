@@ -15,3 +15,10 @@ export interface IUsersReduser {
     status: "idle" | "pending" | "fulfilled" | "rejected";
     error: any | null;
 }
+
+export interface IPost {
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+}
